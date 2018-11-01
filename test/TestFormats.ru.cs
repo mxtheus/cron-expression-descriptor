@@ -1,4 +1,4 @@
-﻿using Xunit;
+using Xunit;
 using Assert = CronExpressionDescriptor.Test.Support.AssertExtensions;
 
 namespace CronExpressionDescriptor.Test
@@ -16,14 +16,14 @@ namespace CronExpressionDescriptor.Test
         [Fact]
         public void TestEveryMinute()
         {
-            Assert.EqualsCaseInsensitive("Каждую минуту", GetDescription("* * * * *"));
+            Assert.EqualsCaseInsensitive("Каждая минута", GetDescription("* * * * *"));
         }
 
         [Fact]
         public void TestEvery1Minute()
         {
-            Assert.EqualsCaseInsensitive("Каждую минуту", GetDescription("*/1 * * * *"));
-            Assert.EqualsCaseInsensitive("Каждую минуту", GetDescription("0 0/1 * * * ?"));
+            Assert.EqualsCaseInsensitive("Каждая минута", GetDescription("*/1 * * * *"));
+            Assert.EqualsCaseInsensitive("Каждая минута", GetDescription("0 0/1 * * * ?"));
         }
 
         [Fact]
@@ -36,13 +36,13 @@ namespace CronExpressionDescriptor.Test
         [Fact]
         public void TestTimeOfDayCertainDaysOfWeek()
         {
-            Assert.EqualsCaseInsensitive("В 23:00, понедельник по пятница", GetDescription("0 23 ? * MON-FRI"));
+            Assert.EqualsCaseInsensitive("В 23:00, с понедельник по пятница", GetDescription("0 23 ? * MON-FRI"));
         }
 
         [Fact]
         public void TestEverySecond()
         {
-            Assert.EqualsCaseInsensitive("Каждую секунду", GetDescription("* * * * * *"));
+            Assert.EqualsCaseInsensitive("Каждая секунда", GetDescription(" * * * * * *"));
         }
 
         [Fact]
@@ -67,7 +67,7 @@ namespace CronExpressionDescriptor.Test
         [Fact]
         public void TestWeekdaysAtTime()
         {
-            Assert.EqualsCaseInsensitive("В 11:30, понедельник по пятница", GetDescription("30 11 * * 1-5"));
+            Assert.EqualsCaseInsensitive("В 11:30, с понедельник по пятница", GetDescription("30 11 * * 1-5"));
         }
 
         [Fact]
@@ -79,19 +79,19 @@ namespace CronExpressionDescriptor.Test
         [Fact]
         public void TestMinuteSpan()
         {
-            Assert.EqualsCaseInsensitive("Каждую минуту с 11:00 по 11:10", GetDescription("0-10 11 * * *"));
+            Assert.EqualsCaseInsensitive("Каждая минута в промежутке от 11:00 до 11:10", GetDescription("0-10 11 * * *"));
         }
 
         [Fact]
         public void TestOneMonthOnly()
         {
-            Assert.EqualsCaseInsensitive("Каждую минуту, только в март", GetDescription("* * * 3 *"));
+            Assert.EqualsCaseInsensitive("Каждая минута, только в Март", GetDescription("* * * 3 *"));
         }
 
         [Fact]
         public void TestTwoMonthsOnly()
         {
-            Assert.EqualsCaseInsensitive("Каждую минуту, только в март и июнь", GetDescription("* * * 3,6 *"));
+            Assert.EqualsCaseInsensitive("Каждая минута, только в Март и Июнь", GetDescription("* * * 3,6 *"));
         }
 
         [Fact]
@@ -109,13 +109,13 @@ namespace CronExpressionDescriptor.Test
         [Fact]
         public void TestOnceAWeek()
         {
-            Assert.EqualsCaseInsensitive("В 09:46, только в понедельник", GetDescription("46 9 * * 1"));
+            Assert.EqualsCaseInsensitive("В 09:46, только по понедельник", GetDescription("46 9 * * 1"));
         }
 
         [Fact]
         public void TestDayOfMonth()
         {
-            Assert.EqualsCaseInsensitive("В 12:23, в 15 число месяца", GetDescription("23 12 15 * *"));
+            Assert.EqualsCaseInsensitive("В 12:23, в 15 день месяца", GetDescription("23 12 15 * *"));
         }
 
         [Fact]
@@ -133,37 +133,37 @@ namespace CronExpressionDescriptor.Test
         [Fact]
         public void TestMonthNameRange2()
         {
-            Assert.EqualsCaseInsensitive("В 12:23, январь по февраль", GetDescription("23 12 * JAN-FEB *"));
+            Assert.EqualsCaseInsensitive("В 12:23, с Январь по Февраль", GetDescription("23 12 * JAN-FEB *"));
         }
 
         [Fact]
         public void TestMonthNameRange3()
         {
-            Assert.EqualsCaseInsensitive("В 12:23, январь по март", GetDescription("23 12 * JAN-MAR *"));
+            Assert.EqualsCaseInsensitive("В 12:23, с Январь по Март", GetDescription("23 12 * JAN-MAR *"));
         }
 
         [Fact]
         public void TestDayOfWeekName()
         {
-            Assert.EqualsCaseInsensitive("В 12:23, только в воскресенье", GetDescription("23 12 * * SUN"));
+            Assert.EqualsCaseInsensitive("В 12:23, только по воскресенье", GetDescription("23 12 * * SUN"));
         }
 
         [Fact]
         public void TestDayOfWeekRange()
         {
-            Assert.EqualsCaseInsensitive("Каждые 5 минут, с 15:00 по 15:59, понедельник по пятница", GetDescription("*/5 15 * * MON-FRI"));
+            Assert.EqualsCaseInsensitive("Каждые 5 минут, с 15:00 по 15:59, с понедельник по пятница", GetDescription("*/5 15 * * MON-FRI"));
         }
 
         [Fact]
         public void TestDayOfWeekOnceInMonth()
         {
-            Assert.EqualsCaseInsensitive("Каждую минуту, в третий понедельник месяца", GetDescription("* * * * MON#3"));
+            Assert.EqualsCaseInsensitive("Каждая минута, в третий понедельник месяца", GetDescription("* * * * MON#3"));
         }
 
         [Fact]
         public void TestLastDayOfTheWeekOfTheMonth()
         {
-            Assert.EqualsCaseInsensitive("Каждую минуту, в последний четверг месяца", GetDescription("* * * * 4L"));
+            Assert.EqualsCaseInsensitive("Каждая минута, в последний четверг месяца", GetDescription("* * * * 4L"));
         }
 
         [Fact]
@@ -175,37 +175,37 @@ namespace CronExpressionDescriptor.Test
         [Fact]
         public void TestLastWeekdayOfTheMonth()
         {
-            Assert.EqualsCaseInsensitive("Каждую минуту, в последний будний день месяца", GetDescription("* * LW * *"));
+            Assert.EqualsCaseInsensitive("Каждая минута, в последний будний день месяца", GetDescription("* * LW * *"));
         }
 
         [Fact]
         public void TestLastWeekdayOfTheMonth2()
         {
-            Assert.EqualsCaseInsensitive("Каждую минуту, в последний будний день месяца", GetDescription("* * WL * *"));
+            Assert.EqualsCaseInsensitive("Каждая минута, в последний будний день месяца", GetDescription("* * WL * *"));
         }
 
         [Fact]
         public void TestFirstWeekdayOfTheMonth()
         {
-            Assert.EqualsCaseInsensitive("Каждую минуту, в первый будний день месяца", GetDescription("* * 1W * *"));
+            Assert.EqualsCaseInsensitive("Каждая минута, в первый будний день месяца", GetDescription("* * 1W * *"));
         }
 
         [Fact]
         public void TestFirstWeekdayOfTheMonth2()
         {
-            Assert.EqualsCaseInsensitive("Каждую минуту, в первый будний день месяца", GetDescription("* * W1 * *"));
+            Assert.EqualsCaseInsensitive("Каждая минута, в первый будний день месяца", GetDescription("* * W1 * *"));
         }
 
         [Fact]
         public void TestParticularWeekdayOfTheMonth()
         {
-            Assert.EqualsCaseInsensitive("Каждую минуту, в ближайший будний день к 5 месяца", GetDescription("* * 5W * *"));
+            Assert.EqualsCaseInsensitive("Каждая минута, в ближайший будний день 5 месяца", GetDescription("* * 5W * *"));
         }
 
         [Fact]
         public void TestParticularWeekdayOfTheMonth2()
         {
-            Assert.EqualsCaseInsensitive("Каждую минуту, в ближайший будний день к 5 месяца", GetDescription("* * W5 * *"));
+            Assert.EqualsCaseInsensitive("Каждая минута, в ближайший будний день 5 месяца", GetDescription("* * W5 * *"));
         }
 
         [Fact]
@@ -223,31 +223,31 @@ namespace CronExpressionDescriptor.Test
         [Fact]
         public void TestSecondMinutesHoursIntervals()
         {
-            Assert.EqualsCaseInsensitive("Секунды с 5 по 10, минуты с 30 по 35, с 10:00 по 12:59", GetDescription("5-10 30-35 10-12 * * *"));
+            Assert.EqualsCaseInsensitive("екунды с 5 по 10 после минуты, минуты с 30 по 35 после часа, с 10:00 по 12:59", GetDescription("5-10 30-35 10-12 * * *"));
         }
 
         [Fact]
         public void TestEvery5MinutesAt30Seconds()
         {
-            Assert.EqualsCaseInsensitive("В 30 секунд, каждые 5 минут", GetDescription("30 */5 * * * *"));
+            Assert.EqualsCaseInsensitive("В 30 секунд после минуты, каждые 5 минут", GetDescription("30 */5 * * * *"));
         }
 
         [Fact]
         public void TestMinutesPastTheHourRange()
         {
-            Assert.EqualsCaseInsensitive("В 30 минут, с 10:00 по 13:59, только в среда и пятница", GetDescription("0 30 10-13 ? * WED,FRI"));
+            Assert.EqualsCaseInsensitive("В 30 минут после часа, с 10:00 по 13:59, только по среда и пятница", GetDescription("0 30 10-13 ? * WED,FRI"));
         }
 
         [Fact]
         public void TestSecondsPastTheMinuteInterval()
         {
-            Assert.EqualsCaseInsensitive("В 10 секунд, каждые 5 минут", GetDescription("10 0/5 * * * ?"));
+            Assert.EqualsCaseInsensitive("В 10 секунд после минуты, каждые 5 минут", GetDescription("10 0/5 * * * ?"));
         }
 
         [Fact]
         public void TestBetweenWithInterval()
         {
-            Assert.EqualsCaseInsensitive("Каждые 3 минут, минуты с 2 по 59, в 01:00, 09:00, и 22:00, с 11 по 26 число месяца, январь по июнь", GetDescription("2-59/3 1,9,22 11-26 1-6 ?"));
+            Assert.EqualsCaseInsensitive("Каждые 3 минут, минуты с 2 по 59 после часа, в 01:00, 09:00, и 22:00, с 11 по 26 день месяца, с Январь по Июнь", GetDescription("2-59/3 1,9,22 11-26 1-6 ?"));
         }
 
         [Fact]
@@ -265,37 +265,37 @@ namespace CronExpressionDescriptor.Test
         [Fact]
         public void TestOneYearOnlyWithSeconds()
         {
-            Assert.EqualsCaseInsensitive("Каждую секунду, только в 2013", GetDescription("* * * * * * 2013"));
+            Assert.EqualsCaseInsensitive("Каждая секунда, только в 2013", GetDescription("* * * * * * 2013"));
         }
 
         [Fact]
         public void TestOneYearOnlyWithoutSeconds()
         {
-            Assert.EqualsCaseInsensitive("Каждую минуту, только в 2013", GetDescription("* * * * * 2013"));
+            Assert.EqualsCaseInsensitive("Каждая минута, только в 2013", GetDescription("* * * * * 2013"));
         }
 
         [Fact]
         public void TestTwoYearsOnly()
         {
-            Assert.EqualsCaseInsensitive("Каждую минуту, только в 2013 и 2014", GetDescription("* * * * * 2013,2014"));
+            Assert.EqualsCaseInsensitive("Каждая минута, только в 2013 и 2014", GetDescription("* * * * * 2013,2014"));
         }
 
         [Fact]
         public void TestYearRange2()
         {
-            Assert.EqualsCaseInsensitive("В 12:23, январь по февраль, 2013 по 2014", GetDescription("23 12 * JAN-FEB * 2013-2014"));
+            Assert.EqualsCaseInsensitive("В 12:23, с Январь по Февраль, с 2013 по 2014", GetDescription("23 12 * JAN-FEB * 2013-2014"));
         }
 
         [Fact]
         public void TestYearRange3()
         {
-            Assert.EqualsCaseInsensitive("В 12:23, январь по март, 2013 по 2015", GetDescription("23 12 * JAN-MAR * 2013-2015"));
+            Assert.EqualsCaseInsensitive("В 12:23, с Январь по Март, с 2013 по 2015", GetDescription("23 12 * JAN-MAR * 2013-2015"));
         }
 
         [Fact]
         public void TestHourRange()
         {
-            Assert.EqualsCaseInsensitive("Каждые 30 минут, с 08:00 по 09:59, в 5 и 20 число месяца", GetDescription("0 0/30 8-9 5,20 * ?"));
+            Assert.EqualsCaseInsensitive("Каждые 30 минут, с 08:00 по 09:59, в 5 и 20 день месяца", GetDescription("0 0/30 8-9 5,20 * ?"));
         }
 
         [Fact]
@@ -316,56 +316,56 @@ namespace CronExpressionDescriptor.Test
         [Fact]
         public void TestHourRangeWithEveryPortion()
         {
-            Assert.EqualsCaseInsensitive("В 25 минут, каждые 13 часов, с 07:00 по 19:59", GetDescription("0 25 7-19/13 ? * *"));
+            Assert.EqualsCaseInsensitive("В 25 минут после часа, каждые 13 часов, с 07:00 по 19:59", GetDescription("0 25 7-19/13 ? * *"));
         }
 
         [Fact]
         public void TestHourRangeWithTrailingZeroWithEveryPortion()
         {
-            Assert.EqualsCaseInsensitive("В 25 минут, каждые 13 часов, с 07:00 по 20:59", GetDescription("0 25 7-20/13 ? * *"));
+            Assert.EqualsCaseInsensitive("В 25 минут после часа, каждые 13 часов, с 07:00 по 20:59", GetDescription("0 25 7-20/13 ? * *"));
         }
 
         [Fact]
         public void TestSecondsInternalWithStepValue()
         {
             // GitHub Issue #49: https://github.com/bradymholt/cron-expression-descriptor/issues/49
-            Assert.EqualsCaseInsensitive("Каждые 30 секунд, начало в 5 секунд", GetDescription("5/30 * * * * ?"));
+            Assert.EqualsCaseInsensitive("Каждые 30 секунд, начиная с в 5 секунд после минуты", GetDescription("5/30 * * * * ?"));
         }
 
         [Fact]
         public void TestMinutesInternalWithStepValue()
         {
-            Assert.EqualsCaseInsensitive("Каждые 30 минут, начало в 5 минут", GetDescription("0 5/30 * * * ?"));
+            Assert.EqualsCaseInsensitive("Каждые 30 минут, начиная с в 5 минут после часа", GetDescription("0 5/30 * * * ?"));
         }
 
         [Fact]
         public void TestHoursInternalWithStepValue()
         {
-            Assert.EqualsCaseInsensitive("Каждую секунду, каждые 8 часов, начало в 05:00", GetDescription("* * 5/8 * * ?"));
+            Assert.EqualsCaseInsensitive("Каждая секунда, каждые 8 часов, начиная с в 05:00", GetDescription(" * * 5/8 * * ?"));
         }
 
         [Fact]
         public void TestDayOfMonthInternalWithStepValue()
         {
-            Assert.EqualsCaseInsensitive("В 07:05, каждые 3 дней, начало в 2 число месяца", GetDescription("0 5 7 2/3 * ? *"));
+            Assert.EqualsCaseInsensitive("В 07:05, каждые 3 дней, начиная с в 2 день месяца", GetDescription("0 5 7 2/3 * ? *"));
         }
 
         [Fact]
         public void TestMonthInternalWithStepValue()
         {
-            Assert.EqualsCaseInsensitive("В 07:05, каждые 2 месяцев, март по декабрь", GetDescription("0 5 7 ? 3/2 ? *"));
+            Assert.EqualsCaseInsensitive("В 07:05, каждые 2 месяцев, с Март по Декабрь", GetDescription("0 5 7 ? 3/2 ? *"));
         }
 
         [Fact]
         public void TestDayOfWeekInternalWithStepValue()
         {
-            Assert.EqualsCaseInsensitive("В 07:05, каждые 3 дней недели, вторник по суббота", GetDescription("0 5 7 ? * 2/3 *"));
+            Assert.EqualsCaseInsensitive("В 07:05, каждые 3 дней недели, с вторник по суббота", GetDescription("0 5 7 ? * 2/3 *"));
         }
 
         [Fact]
         public void TestYearInternalWithStepValue()
         {
-            Assert.EqualsCaseInsensitive("В 07:05, каждые 4 лет, 2016 по 9999", GetDescription("0 5 7 ? * ? 2016/4"));
+            Assert.EqualsCaseInsensitive("В 07:05, каждые 4 лет, с 2016 по 9999", GetDescription("0 5 7 ? * ? 2016/4"));
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!--
     Microsoft ResX Schema
@@ -125,8 +125,8 @@
     <comment>EveryHour description</comment>
   </data>
   <data name="AnErrorOccuredWhenGeneratingTheExpressionD" xml:space="preserve">
-    <value>Une erreur est survenue en générant la description de l'expression cron. Vérifiez sa syntaxe.</value>
-    <comment>AnErrorOccuredWhenGeneratingTheExpressionD description</comment>
+    <value>Une erreur s'est produite lors de la génération de la description de l'expression.. Vérifiez la syntaxe d'expression cron.</value>
+  <comment>AnErrorOccuredWhenGeneratingTheExpressionD description</comment>
   </data>
   <data name="AtSpace" xml:space="preserve">
     <value>À </value>
@@ -153,32 +153,32 @@
     <comment>EveryX0Seconds description</comment>
   </data>
   <data name="SecondsX0ThroughX1PastTheMinute" xml:space="preserve">
-    <value>les secondes entre {0} et {1} après la minute</value>
-    <comment>SecondsX0ThroughX1PastTheMinute description</comment>
+    <value>{0} secondes jusqu'à {1} après la minute</value>
+  <comment>SecondsX0ThroughX1PastTheMinute description</comment>
   </data>
   <data name="AtX0SecondsPastTheMinute" xml:space="preserve">
-    <value>{0} secondes après la minute</value>
-    <comment>AtX0SecondsPastTheMinute description</comment>
+    <value>à {0} secondes après la minute</value>
+  <comment>AtX0SecondsPastTheMinute description</comment>
   </data>
   <data name="EveryX0Minutes" xml:space="preserve">
     <value>toutes les {0} minutes</value>
     <comment>EveryX0Minutes description</comment>
   </data>
   <data name="MinutesX0ThroughX1PastTheHour" xml:space="preserve">
-    <value>les minutes entre {0} et {1} après l'heure</value>
-    <comment>MinutesX0ThroughX1PastTheHour description</comment>
+    <value>{0} minutes jusqu'à {1} après la minute</value>
+  <comment>MinutesX0ThroughX1PastTheHour description</comment>
   </data>
   <data name="AtX0MinutesPastTheHour" xml:space="preserve">
-    <value>{0} minutes après l'heure</value>
-    <comment>AtX0MinutesPastTheHour description</comment>
+    <value>à {0} minutes après l'heure</value>
+  <comment>AtX0MinutesPastTheHour description</comment>
   </data>
   <data name="EveryX0Hours" xml:space="preserve">
     <value>toutes les {0} heures</value>
     <comment>EveryX0Hours description</comment>
   </data>
   <data name="BetweenX0AndX1" xml:space="preserve">
-    <value>de {0} à {1}</value>
-    <comment>BetweenX0AndX1 description</comment>
+    <value>entre {0} et {1}</value>
+  <comment>BetweenX0AndX1 description</comment>
   </data>
   <data name="AtX0" xml:space="preserve">
     <value>à {0}</value>
@@ -189,20 +189,20 @@
     <comment>ComaEveryDay description</comment>
   </data>
   <data name="ComaEveryX0DaysOfTheWeek" xml:space="preserve">
-    <value>, every {0} days of the week</value>
-    <comment>EveryX0DaysOfTheWeek description</comment>
+    <value>, tous les {0} jours de la semaine</value>
+  <comment>EveryX0DaysOfTheWeek description</comment>
   </data>
   <data name="ComaX0ThroughX1" xml:space="preserve">
-    <value>, de {0} à {1}</value>
-    <comment>X0ThroughX1 description</comment>
+    <value>, {0} jusqu'à {1}</value>
+  <comment>X0ThroughX1 description</comment>
   </data>
   <data name="First" xml:space="preserve">
     <value>premier</value>
     <comment>First description</comment>
   </data>
   <data name="Second" xml:space="preserve">
-    <value>second</value>
-    <comment>Second description</comment>
+    <value>deuxième</value>
+  <comment>Second description</comment>
   </data>
   <data name="Third" xml:space="preserve">
     <value>troisième</value>
@@ -237,24 +237,24 @@
     <comment>EveryX0Months description</comment>
   </data>
   <data name="ComaOnlyInX0" xml:space="preserve">
-    <value>, uniquement en {0}</value>
-    <comment>ComaOnlyInX0 description</comment>
+    <value>, uniquement dans {0}</value>
+  <comment>ComaOnlyInX0 description</comment>
   </data>
   <data name="ComaOnTheLastDayOfTheMonth" xml:space="preserve">
     <value>, le dernier jour du mois</value>
     <comment>ComaOnTheLastDayOfTheMonth description</comment>
   </data>
   <data name="ComaOnTheLastWeekdayOfTheMonth" xml:space="preserve">
-    <value>, le dernier jour ouvrable du mois</value>
-    <comment>OnTheLastWeekdayOfTheMonth description</comment>
+    <value>, le dernier jour de la semaine du mois</value>
+  <comment>OnTheLastWeekdayOfTheMonth description</comment>
   </data>
   <data name="FirstWeekday" xml:space="preserve">
-    <value>premier jour ouvrable</value>
-    <comment>FirstWeekday description</comment>
+    <value>premier jour de la semaine</value>
+  <comment>FirstWeekday description</comment>
   </data>
   <data name="WeekdayNearestDayX0" xml:space="preserve">
-    <value>jour ouvrable le plus proche du {0}</value>
-    <comment>WeekdayNearestDayX0 description</comment>
+    <value>jour de la semaine le plus proche du jour {0}</value>
+  <comment>WeekdayNearestDayX0 description</comment>
   </data>
   <data name="ComaOnTheX0OfTheMonth" xml:space="preserve">
     <value>, le {0} du mois</value>
@@ -265,12 +265,12 @@
     <comment>ComaEveryX0Days description</comment>
   </data>
   <data name="ComaBetweenDayX0AndX1OfTheMonth" xml:space="preserve">
-    <value>, du {0} au {1} du mois</value>
-    <comment>BetweenDayX0AndX1OfTheMonth description</comment>
+    <value>, entre le jour {0} et {1} du mois</value>
+  <comment>BetweenDayX0AndX1OfTheMonth description</comment>
   </data>
   <data name="ComaOnDayX0OfTheMonth" xml:space="preserve">
-    <value>, le {0} du mois</value>
-    <comment>ComaOnDayX0OfTheMonth description</comment>
+    <value>, le jour {0} du mois</value>
+  <comment>ComaOnDayX0OfTheMonth description</comment>
   </data>
   <data name="SpaceAndSpace" xml:space="preserve">
     <value> et </value>
@@ -285,8 +285,8 @@
     <comment>ComaEveryHour description</comment>
   </data>
   <data name="ComaEveryX0Years" xml:space="preserve">
-    <value>, tous les {0} ans</value>
-    <comment>ComaEveryX0Years description</comment>
+    <value>, toutes les {0} années</value>
+  <comment>ComaEveryX0Years description</comment>
   </data>
   <data name="ComaDaysX0ThroughX1" xml:space="preserve">
     <value>, du {0} au {1}</value>
@@ -297,8 +297,8 @@
     <comment>WeekSpaceAndSpace description</comment>
   </data>
   <data name="CommaStartingX0" xml:space="preserve">
-    <value>, départ {0}</value>
-    <comment>CommaStartingX0 description</comment>
+    <value>, à partir de {0}</value>
+  <comment>CommaStartingX0 description</comment>
   </data>
   <data name="CommaDaysBeforeTheLastDayOfTheMonth" xml:space="preserve">
     <value>, {0} jours avant le dernier jour du mois</value>

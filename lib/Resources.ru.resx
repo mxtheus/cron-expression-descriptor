@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!--
     Microsoft ResX Schema
@@ -118,23 +118,23 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="EveryMinute" xml:space="preserve">
-    <value>каждую минуту</value>
+    <value>каждая минута</value>
   </data>
   <data name="EveryHour" xml:space="preserve">
     <value>каждый час</value>
     <comment>EveryHour description</comment>
   </data>
   <data name="AnErrorOccuredWhenGeneratingTheExpressionD" xml:space="preserve">
-    <value>Произошла ошибка во время генерации описания выражения. Проверьте синтаксис крон-выражения.</value>
-    <comment>AnErrorOccuredWhenGeneratingTheExpressionD description</comment>
+    <value>При создании описания выражения произошла ошибка. Проверьте синтаксис выражения CRON.</value>
+  <comment>AnErrorOccuredWhenGeneratingTheExpressionD description</comment>
   </data>
   <data name="AtSpace" xml:space="preserve">
     <value>В </value>
     <comment>At description</comment>
   </data>
   <data name="EveryMinuteBetweenX0AndX1" xml:space="preserve">
-    <value>Каждую минуту с {0} по {1}</value>
-    <comment>EveryMinuteBetweenX0AndX1 description</comment>
+    <value>Каждая минута в промежутке от {0} до {1}</value>
+  <comment>EveryMinuteBetweenX0AndX1 description</comment>
   </data>
   <data name="At" xml:space="preserve">
     <value>В</value>
@@ -145,32 +145,32 @@
     <comment>And description</comment>
   </data>
   <data name="EverySecond" xml:space="preserve">
-    <value>каждую секунду</value>
-    <comment>EverySecond description</comment>
+    <value>каждая секунда</value>
+  <comment>EverySecond description</comment>
   </data>
   <data name="EveryX0Seconds" xml:space="preserve">
     <value>каждые {0} секунд</value>
     <comment>EveryX0Seconds description</comment>
   </data>
   <data name="SecondsX0ThroughX1PastTheMinute" xml:space="preserve">
-    <value>секунды с {0} по {1}</value>
-    <comment>SecondsX0ThroughX1PastTheMinute description</comment>
+    <value>секунды с {0} по {1} после минуты</value>
+  <comment>SecondsX0ThroughX1PastTheMinute description</comment>
   </data>
   <data name="AtX0SecondsPastTheMinute" xml:space="preserve">
-    <value>в {0} секунд</value>
-    <comment>AtX0SecondsPastTheMinute description</comment>
+    <value>в {0} секунд после минуты</value>
+  <comment>AtX0SecondsPastTheMinute description</comment>
   </data>
   <data name="EveryX0Minutes" xml:space="preserve">
     <value>каждые {0} минут</value>
     <comment>EveryX0Minutes description</comment>
   </data>
   <data name="MinutesX0ThroughX1PastTheHour" xml:space="preserve">
-    <value>минуты с {0} по {1}</value>
-    <comment>MinutesX0ThroughX1PastTheHour description</comment>
+    <value>минуты с {0} по {1} после часа</value>
+  <comment>MinutesX0ThroughX1PastTheHour description</comment>
   </data>
   <data name="AtX0MinutesPastTheHour" xml:space="preserve">
-    <value>в {0} минут</value>
-    <comment>AtX0MinutesPastTheHour description</comment>
+    <value>в {0} минут после часа</value>
+  <comment>AtX0MinutesPastTheHour description</comment>
   </data>
   <data name="EveryX0Hours" xml:space="preserve">
     <value>каждые {0} часов</value>
@@ -185,16 +185,16 @@
     <comment>AtX0 description</comment>
   </data>
   <data name="ComaEveryDay" xml:space="preserve">
-    <value>, каждый день</value>
-    <comment>ComaEveryDay description</comment>
+    <value>, ежедневно</value>
+  <comment>ComaEveryDay description</comment>
   </data>
   <data name="ComaEveryX0DaysOfTheWeek" xml:space="preserve">
     <value>, каждые {0} дней недели</value>
     <comment>EveryX0DaysOfTheWeek description</comment>
   </data>
   <data name="ComaX0ThroughX1" xml:space="preserve">
-    <value>, {0} по {1}</value>
-    <comment>X0ThroughX1 description</comment>
+    <value>, с {0} по {1}</value>
+  <comment>X0ThroughX1 description</comment>
   </data>
   <data name="First" xml:space="preserve">
     <value>первый</value>
@@ -229,8 +229,8 @@
     <comment>OnTheLastX0OfTheMonth description</comment>
   </data>
   <data name="ComaOnlyOnX0" xml:space="preserve">
-    <value>, только в {0}</value>
-    <comment>OnlyOnX0 description</comment>
+    <value>, только по {0}</value>
+  <comment>OnlyOnX0 description</comment>
   </data>
   <data name="ComaEveryX0Months" xml:space="preserve">
     <value>, каждые {0} месяцев</value>
@@ -253,8 +253,8 @@
     <comment>FirstWeekday description</comment>
   </data>
   <data name="WeekdayNearestDayX0" xml:space="preserve">
-    <value>ближайший будний день к {0}</value>
-    <comment>WeekdayNearestDayX0 description</comment>
+    <value>ближайший будний день {0}</value>
+  <comment>WeekdayNearestDayX0 description</comment>
   </data>
   <data name="ComaOnTheX0OfTheMonth" xml:space="preserve">
     <value>, в {0} месяца</value>
@@ -265,20 +265,20 @@
     <comment>ComaEveryX0Days description</comment>
   </data>
   <data name="ComaBetweenDayX0AndX1OfTheMonth" xml:space="preserve">
-    <value>, с {0} по {1} число месяца</value>
-    <comment>BetweenDayX0AndX1OfTheMonth description</comment>
+    <value>, с {0} по {1} день месяца</value>
+  <comment>BetweenDayX0AndX1OfTheMonth description</comment>
   </data>
   <data name="ComaOnDayX0OfTheMonth" xml:space="preserve">
-    <value>, в {0} число месяца</value>
-    <comment>ComaOnDayX0OfTheMonth description</comment>
+    <value>, в {0} день месяца</value>
+  <comment>ComaOnDayX0OfTheMonth description</comment>
   </data>
   <data name="SpaceAndSpace" xml:space="preserve">
     <value> и </value>
     <comment>And description</comment>
   </data>
   <data name="ComaEveryMinute" xml:space="preserve">
-    <value>, каждую минуту</value>
-    <comment>ComaEveryMinute1 description</comment>
+    <value>, каждая минута</value>
+  <comment>ComaEveryMinute1 description</comment>
   </data>
   <data name="ComaEveryHour" xml:space="preserve">
     <value>, каждый час</value>
@@ -289,11 +289,11 @@
     <comment>ComaEveryX0Years description</comment>
   </data>
   <data name="CommaStartingX0" xml:space="preserve">
-    <value>, начало {0}</value>
-    <comment>CommaStartingX0 description</comment>
+    <value>, начиная с {0}</value>
+  <comment>CommaStartingX0 description</comment>
   </data>
   <data name="CommaDaysBeforeTheLastDayOfTheMonth" xml:space="preserve">
-    <value>, {0} дней до последнего дня месяца</value>
-    <comment>CommaDaysBeforeTheLastDayOfTheMonth description</comment>
+    <value>, за {0} дней до последнего дня месяца</value>
+  <comment>CommaDaysBeforeTheLastDayOfTheMonth description</comment>
   </data>
 </root>
