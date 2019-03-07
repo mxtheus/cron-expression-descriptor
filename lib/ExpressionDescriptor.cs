@@ -376,7 +376,7 @@ namespace CronExpressionDescriptor
                               ? s.Replace("L", string.Empty)
                               : s;
 
-              return m_culture.DateTimeFormat.GetDayName(((DayOfWeek)Convert.ToInt32(exp)));
+              return m_culture.DateTimeFormat.GetDayName(((DayOfWeek)(Convert.ToInt32(exp) - 1)));
             }),
             (s => string.Format(GetString("ComaEveryX0DaysOfTheWeek"), s)),
             (s => GetString("ComaX0ThroughX1")),
